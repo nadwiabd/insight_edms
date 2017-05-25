@@ -11,7 +11,7 @@ except ImportError:
 import mayan
 
 PACKAGE_NAME = 'insight_edms'
-PACKAGE_DIR = 'insight'
+PACKAGE_DIR = 'mayan'
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
@@ -42,7 +42,7 @@ def find_packages(directory):
         os.chdir(root_dir)
 
     for dirpath, dirnames, filenames in os.walk(directory):
-        if not dirpath.startswith('insight/media'):
+        if not dirpath.startswith('mayan/media'):
             # Ignore dirnames that start with '.'
             if os.path.basename(dirpath).startswith('.'):
                 continue
@@ -127,7 +127,7 @@ setup(
     name=PACKAGE_NAME,
     packages=find_packages(PACKAGE_DIR),
     platforms=['any'],
-    scripts=['insight/bin/insight-edms.py'],
+    scripts=['mayan/bin/insight-edms.py'],
     url='https://github.com/nadwiabd/insight_edms',
     version=mayan.__version__,
     zip_safe=False,
