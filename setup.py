@@ -101,8 +101,8 @@ with open('HISTORY.rst') as f:
     history = f.read()
 
 setup(
-    author='Roberto Rosario',
-    author_email='roberto.rosario@mayan-edms.com',
+    author='Insight Media',
+    author_email='edms@insightmedia.com.my',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
@@ -128,7 +128,7 @@ setup(
     packages=find_packages(PACKAGE_DIR),
     platforms=['any'],
     scripts=['mayan/bin/mayan-edms.py'],
-    url='https://gitlab.com/mayan-edms/mayan-edms',
+    url='https://github.com/nadwiabd/insight_edms',
     version=mayan.__version__,
     zip_safe=False,
 )
